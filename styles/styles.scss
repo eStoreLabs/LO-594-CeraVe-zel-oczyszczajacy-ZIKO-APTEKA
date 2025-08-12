@@ -16,6 +16,7 @@ $px-M: 16px;
 $px-L: 24px;
 $px-XL: 32px;
 $px-XXL: 40px;
+$px-XXXL: 60px;
 
 $color-main: #003058;
 $color-bg: #ffffff;
@@ -36,7 +37,7 @@ $transition: all 0.3s ease-in-out;
   line-height: 1.25;
   color: $color-main;
   background-color: $color-bg;
-  max-width: 990px;
+  max-width: 1330px;
   margin: auto;
   container-type: inline-size;
   container-name: es-rc-content;
@@ -70,6 +71,10 @@ $transition: all 0.3s ease-in-out;
     text-wrap: balance;
     text-transform: uppercase;
     margin-block: $px-M;
+    @container es-rc-content (min-width: 992px) {
+      font-size: $fs-header-md;
+      margin-block: $px-L;
+    }
   }
 
   .es-mobile {
@@ -217,6 +222,31 @@ $transition: all 0.3s ease-in-out;
       &__right {
         &__textCtn {
           margin-left: 20%;
+        }
+      }
+    }
+    @container es-rc-content (min-width: 992px) {
+      &__right {
+        &__logo {
+          max-width: 25%;
+          right: 5.5%;
+        }
+        &__textCtn {
+          max-width: 550px;
+          margin-left: 24%;
+        }
+        &__wrapper {
+          gap: 24px;
+        }
+        &__title {
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+        &__icon {
+          max-width: 113px;
+        }
+        &__text {
+          font-size: 25px;
         }
       }
     }
@@ -418,6 +448,60 @@ $transition: all 0.3s ease-in-out;
         }
       }
     }
+    @container es-rc-content (min-width: 992px) {
+      padding: $px-XXXL;
+      &__title {
+        font-size: $fs-header-md;
+      }
+      &__subtitle {
+        font-size: 28px;
+      }
+      &__points {
+        &__icon {
+          width: 20px;
+          height: 20px;
+          margin-top: 8px;
+        }
+        &__item {
+          font-size: 25px;
+          line-height: 1.4;
+        }
+      }
+      &__wrapper {
+        &--top {
+          max-width: 550px;
+        }
+        &--bottom {
+          max-width: 680px;
+        }
+      }
+      &__badge {
+        &Ctn {
+          max-width: 500px;
+          gap: 30px;
+        }
+        &__text {
+          font-size: 30px;
+        }
+      }
+      &__text {
+        font-size: 23px;
+      }
+      &__shape {
+        max-width: 390px;
+        padding: 0px 0px 0px 40px;
+        top: 4%;
+        &__text {
+          font-size: 17px;
+          &--number {
+            font-size: 60px;
+          }
+        }
+      }
+      &__bg {
+        overflow: hidden;
+      }
+    }
   }
 
   .es-ingredients {
@@ -481,6 +565,30 @@ $transition: all 0.3s ease-in-out;
         justify-content: flex-end;
         &__item {
           width: 250px;
+        }
+      }
+    }
+    @container es-rc-content (min-width: 992px) {
+      min-height: 390px;
+      display: flex;
+      align-items: center;
+      &__bubbles {
+        max-width: 385px;
+      }
+      &__title {
+        font-size: $fs-header-md;
+      }
+      &__list {
+        margin-top: $px-XXXL;
+        flex-wrap: nowrap;
+        &__item {
+          max-width: 300px;
+        }
+        &__title {
+          font-size: 25px;
+        }
+        &__text {
+          font-size: 23px;
         }
       }
     }
@@ -560,9 +668,41 @@ $transition: all 0.3s ease-in-out;
       min-height: 450px;
       padding: $px-XL;
       &__image {
+        height: 100%;
         &__container {
-          width: 55%;
+          width: 60%;
         }
+      }
+    }
+    @container es-rc-content (min-width: 880px) {
+      height: 500px;
+      &__container {
+        padding: $px-XXXL;
+      }
+      &__image {
+        max-height: 500px;
+        width: auto;
+        margin-right: 0;
+        &__container {
+          height: auto;
+        }
+      }
+    }
+    @container es-rc-content (min-width: 992px) {
+      height: 550px;
+      &__title {
+        font-size: 30px;
+      }
+      &__list {
+        &__icon {
+          max-width: 55px;
+        }
+        &__text {
+          font-size: 25px;
+        }
+      }
+      &__image {
+        max-height: 600px;
       }
     }
   }
@@ -609,6 +749,18 @@ $transition: all 0.3s ease-in-out;
     @container es-rc-content (min-width: 768px) {
       &__image {
         width: 50%;
+      }
+    }
+    @container es-rc-content (min-width: 992px) {
+      &__content {
+        width: 60%;
+        max-width: 650px;
+      }
+      &__name {
+        font-size: 30px;
+      }
+      &__text {
+        font-size: 25px;
       }
     }
   }
@@ -692,6 +844,21 @@ $transition: all 0.3s ease-in-out;
         text-align: left;
         &--highlight {
           min-width: max-content;
+        }
+      }
+    }
+    @container es-rc-content (min-width: 992px) {
+      &__left {
+        padding: $px-XXXL;
+      }
+      &__subtitle {
+        font-size: 30px;
+      }
+      &__packs {
+        padding-right: $px-XXXL;
+        padding-top: $px-XXL;
+        &__sizes {
+          font-size: 20px;
         }
       }
     }
@@ -819,6 +986,39 @@ $transition: all 0.3s ease-in-out;
         }
       }
     }
+    @container es-rc-content (min-width: 992px) {
+      &__item {
+        max-width: unset;
+        &__image {
+          max-width: 150px;
+        }
+        &__text {
+          &-step {
+            font-size: 30px;
+          }
+          &-name {
+            font-size: 25px;
+          }
+          &-text {
+            font-size: 23px;
+            line-height: 1.5;
+          }
+          &-description {
+            height: 150px;
+          }
+        }
+        &__button {
+          font-size: 25px;
+        }
+      }
+    }
+    @container es-rc-content (min-width: 1200px) {
+      &__item {
+        &__image {
+          max-width: unset;
+        }
+      }
+    }
   }
 
   .es-disclaimer {
@@ -831,6 +1031,11 @@ $transition: all 0.3s ease-in-out;
     padding: 20px;
     &__logo {
       max-width: 200px;
+    }
+    @container es-rc-content (min-width: 1200px) {
+      &__logo {
+        max-width: 250px;
+      }
     }
   }
 }
